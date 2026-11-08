@@ -1,0 +1,116 @@
+/* Rastro — estilo comum. Cores do design system do app (Quiet Craft: papel quente + preto). */
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --fill: #f2f1ed;
+  --line: #e8e6e0;
+  --control: #cfcbc2;
+  --ink: #0a0a0a;
+  --ink2: #52514e;
+  --on-ink: #faf9f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --surface: #121212;
+    --fill: #1a1a1a;
+    --line: #222222;
+    --control: #3a3a3a;
+    --ink: #f5f5f2;
+    --ink2: #a3a29e;
+    --on-ink: #0a0a0a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header { padding-top: 28px; padding-bottom: 8px; }
+
+.marca {
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+}
+.marca::after {
+  content: "";
+  display: inline-block;
+  width: 0.22em;
+  height: 0.22em;
+  margin-left: 0.1em;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+main { padding-top: 24px; padding-bottom: 40px; }
+
+h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.7px; font-weight: 500; margin: 0 0 8px; }
+h2 { font-size: 21px; letter-spacing: -0.3px; font-weight: 500; margin: 32px 0 8px; }
+p, li { font-size: 16px; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+code { font-family: "Geist Mono", ui-monospace, Menlo, monospace; font-size: 0.92em; }
+
+.apoio { color: var(--ink2); font-size: 14px; }
+
+.bloco {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.bloco h2:first-child { margin-top: 0; }
+
+.aviso {
+  border: 1px solid var(--control);
+  background: var(--fill);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 20px 0;
+}
+
+a { color: var(--ink); text-decoration-color: var(--control); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--ink); }
+
+nav.links { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+nav.links a {
+  background: var(--ink);
+  color: var(--on-ink);
+  border-radius: 999px;
+  padding: 10px 20px;
+  min-height: 44px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+details { border-top: 1px solid var(--line); padding: 10px 0; }
+details:last-of-type { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 500; min-height: 32px; }
+details p { margin: 8px 0 4px; color: var(--ink2); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  padding-bottom: 32px;
+  color: var(--ink2);
+  font-size: 14px;
+}
+footer a { color: var(--ink2); margin-right: 14px; }

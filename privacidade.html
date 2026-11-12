@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de Privacidade — Rastro</title>
-  <meta name="description" content="Quais dados o Rastro guarda, onde ficam e como apagá-los. Resumo: tudo fica no seu aparelho.">
+  <meta name="description" content="Quais dados o Rastro guarda, onde ficam e como apagá-los. Resumo: o conteúdo fica no seu aparelho.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,66 +14,76 @@
 
   <main>
     <h1>Política de Privacidade</h1>
-    <p class="apoio">Versão 2026-11 · atualizada em 08/11/2026</p>
+    <p class="apoio">Versão 2026-11 · atualizada em 12/11/2026</p>
 
     <div class="aviso">
-      <strong>Em resumo:</strong> o Rastro não tem conta, não tem servidor próprio e não coleta seus dados. Hábitos, diário e lembretes ficam só no seu aparelho. Se você ligar a sincronização com o iCloud, eles vão para o <em>seu</em> iCloud, que nós não conseguimos acessar.
+      <strong>Em resumo:</strong> o Rastro não tem conta nem servidor próprio e não recebe o que você escreve. Hábitos, diário, lembretes, fotos e vídeos ficam no seu aparelho. Se você ligar a sincronização com o iCloud, eles vão para o <em>seu</em> iCloud, que nós não conseguimos acessar. A única comunicação com um serviço de terceiros fora do sistema é a da assinatura Pro, que não leva nenhum conteúdo seu.
     </div>
 
     <h2>1. Quem somos</h2>
-    <p>O Rastro é um aplicativo de hábitos, diário e lembretes para iPhone e Android, desenvolvido por Guilherme Jenner. Para falar sobre dados pessoais, use o contato da seção 12.</p>
+    <p>O Rastro é um aplicativo de hábitos, diário e lembretes para iPhone e Android, desenvolvido por Guilherme Jenner. Para falar sobre dados pessoais, use o contato da seção 13.</p>
 
     <h2>2. O que o Rastro coleta</h2>
-    <p><strong>Nada.</strong> Não existe cadastro, login nem servidor do Rastro que receba suas informações. Não usamos ferramentas de análise, publicidade nem rastreamento, e não vendemos nem compartilhamos dados.</p>
+    <p><strong>Não coletamos o conteúdo do app.</strong> Não existe cadastro, login nem servidor do Rastro que receba seus hábitos, seu diário, seus lembretes, suas fotos ou seus vídeos. Não usamos ferramentas de análise, publicidade nem rastreamento, e não vendemos nem compartilhamos dados. A única exceção é a assinatura Pro, explicada na seção 8: ela envolve a loja de aplicativos e o RevenueCat, e não envolve nada do que você escreve ou registra.</p>
 
     <h2>3. O que fica no seu aparelho</h2>
     <p>Tudo o que você cria no app é guardado localmente:</p>
     <ul>
       <li>seus hábitos, os dias em que você os marcou e as configurações de lembrete de cada um;</li>
       <li>as páginas do diário (texto, humor e o modo de entrada) e os trechos que você destacou;</li>
+      <li>as fotos e os vídeos que você adiciona ao diário, com as legendas;</li>
       <li>seus lembretes e as retrospectivas geradas;</li>
-      <li>as respostas do primeiro uso e preferências, como o tema e o horário do lembrete diário.</li>
+      <li>as respostas do primeiro uso e preferências, como o idioma, o tema e o horário do lembrete diário.</li>
     </ul>
-    <p>Esses dados ficam em um banco de dados criptografado (AES-256). A chave é guardada no armazenamento seguro do sistema (Keychain no iOS, Keystore no Android) e nunca sai do aparelho.</p>
+    <p>Textos, hábitos, lembretes e legendas ficam em um banco de dados criptografado (AES-256). A chave é guardada no armazenamento seguro do sistema (Keychain no iOS, Keystore no Android) e nunca sai do aparelho. As <strong>fotos e os vídeos</strong> ficam como arquivos na pasta privada do app, fora desse banco: só o app os acessa, e eles contam com a proteção que o sistema dá aos dados de cada aplicativo, mas não passam pela criptografia AES-256 do banco.</p>
 
     <h2>4. Permissões que o app pede</h2>
     <ul>
       <li><strong>Microfone e reconhecimento de fala:</strong> usados só quando você toca para falar. A transcrição é feita <strong>no próprio aparelho</strong>. O áudio não é gravado nem guardado; o app guarda apenas o texto que você confirmar. Se o idioma não estiver disponível offline no aparelho, o ditado não funciona, em vez de enviar sua voz para a nuvem.</li>
-      <li><strong>Notificações:</strong> os avisos dos seus hábitos e lembretes são agendados no próprio aparelho. Nenhum servidor nosso participa.</li>
-      <li><strong>Calendário (opcional):</strong> se você escolher &ldquo;Adicionar ao calendário&rdquo;, o Rastro cria no calendário do aparelho os eventos dos hábitos e lembretes que você pediu, e os remove quando você desliga a opção ou apaga o item. Ele não lê o restante da sua agenda para outros fins. Se o seu calendário estiver sincronizado com uma conta (iCloud, Google), é essa conta que mantém os eventos, conforme as regras dela.</li>
+      <li><strong>Câmera e fotos (opcionais):</strong> usadas só quando você escolhe tirar uma foto ou um vídeo, ou selecionar um da galeria, para o diário. O app guarda uma cópia na pasta privada dele e não lê o resto da sua galeria.</li>
+      <li><strong>Notificações:</strong> os avisos dos seus hábitos e lembretes são agendados no próprio aparelho. Nenhum servidor nosso participa. No Android, o app pede também permissão para alarmes exatos, para o aviso tocar na hora marcada.</li>
+      <li><strong>Calendário (opcional):</strong> se você escolher &ldquo;Adicionar ao calendário&rdquo;, o Rastro cria no calendário do aparelho os eventos dos hábitos e lembretes que você pediu, e os remove quando você desliga a opção ou apaga o item. Antes de criar um evento, ele consulta o calendário só para ver se já existe um evento igual (mesmo título e horário) e não duplicar. Não usa o restante da sua agenda para outros fins. Se o seu calendário estiver sincronizado com uma conta (iCloud, Google), é essa conta que mantém os eventos, conforme as regras dela.</li>
+      <li><strong>Internet:</strong> usada para a sincronização com o iCloud, quando você a liga, e para a assinatura Pro (seção 8). O Rastro não usa a internet para enviar o que você escreve a nenhum servidor nosso.</li>
     </ul>
     <p>Você pode negar ou revogar qualquer permissão nos Ajustes do aparelho. O app continua funcionando, sem o recurso correspondente.</p>
 
-    <h2>5. Sincronização com o iCloud (opcional)</h2>
-    <p>Fica desligada até você ligar. Quando ligada, o Rastro grava seus dados no <strong>banco privado do seu iCloud</strong> (CloudKit), com criptografia de ponta a ponta, para que seus aparelhos fiquem iguais. Nós, como desenvolvedores, não temos acesso a esse conteúdo. A Apple usa o serviço de notificações dela para avisar seus outros aparelhos de que algo mudou. O armazenamento ocupa a cota do seu iCloud e segue a política de privacidade da Apple.</p>
+    <h2>5. Sincronização com o iCloud (opcional, só no iPhone)</h2>
+    <p>Fica desligada até você ligar. Quando ligada, o Rastro grava seus dados no <strong>banco privado do seu iCloud</strong> (CloudKit), para que seus aparelhos Apple fiquem iguais. Textos, hábitos, lembretes e legendas são enviados com criptografia de ponta a ponta. Nós, como desenvolvedores, não temos acesso a esse conteúdo. A Apple usa o serviço de notificações dela para avisar seus outros aparelhos de que algo mudou. O armazenamento ocupa a cota do seu iCloud e segue a política de privacidade da Apple.</p>
+    <p><strong>Fotos e vídeos são diferentes:</strong> os arquivos vão ao iCloud como anexos do CloudKit, que <strong>não têm criptografia de ponta a ponta</strong>. A Apple os protege em repouso e só a sua conta os acessa, mas eles não têm a mesma proteção do texto. Nos Ajustes do app você pode desligar o envio de fotos e vídeos ao iCloud e manter o restante sincronizado. No Android não há sincronização.</p>
 
     <h2>6. Apple Watch e widgets</h2>
-    <p>Se você usa o Apple Watch, o iPhone envia ao relógio pareado o resumo de hoje (nomes dos hábitos, quais já foram feitos e o próximo horário), pelo sistema da Apple. Os widgets também leem, no próprio aparelho, um resumo do dia (progresso dos hábitos e o próximo lembrete). Esse conteúdo não vai para nenhum outro lugar.</p>
+    <p>Nas versões do app que incluem o Apple Watch, o iPhone envia ao relógio pareado o resumo de hoje (nomes dos hábitos, quais já foram feitos e o próximo horário), pelo sistema da Apple. Os widgets leem, no próprio aparelho, um resumo do dia (progresso dos hábitos e o próximo lembrete). Esse conteúdo não vai para nenhum outro lugar.</p>
 
     <h2>7. Compartilhamento</h2>
-    <p>A imagem da retrospectiva é criada no aparelho e entregue ao menu de compartilhar do sistema. <strong>Você escolhe</strong> para onde ela vai. Ela traz apenas o mês, a frase de abertura e a taxa de constância; citações do diário e trechos destacados não entram. O Rastro não envia a imagem a lugar nenhum.</p>
+    <p>A imagem da retrospectiva é criada no aparelho e entregue ao menu de compartilhar do sistema. <strong>Você escolhe</strong> para onde ela vai. Ela traz apenas o mês, a frase de abertura e a taxa de constância; citações do diário, trechos destacados, fotos e vídeos não entram. O Rastro não envia a imagem a lugar nenhum. Do mesmo modo, ao abrir uma foto ou um vídeo do diário e tocar em compartilhar, é o sistema que o leva para onde você escolher.</p>
 
-    <h2>8. Terceiros</h2>
-    <p>O Rastro não inclui SDKs de análise, publicidade ou rastreamento. Os serviços do sistema que ele usa (iCloud, notificações, calendário, reconhecimento de fala) têm as próprias políticas, da Apple e do Google.</p>
+    <h2>8. Assinatura Rastro Pro e compras</h2>
+    <p>O plano Pro é vendido pela App Store ou pelo Google Play. O pagamento é feito e guardado por eles: nós <strong>não recebemos</strong> seu nome, e-mail, cartão ou outros dados de pagamento.</p>
+    <p>Para saber se você tem uma assinatura ativa e mostrar os planos com os preços, o app usa o <strong>RevenueCat</strong> (serviço de terceiros, <a href="https://www.revenuecat.com/privacy" rel="noopener">revenuecat.com/privacy</a>). Ele recebe um <strong>identificador anônimo</strong> gerado por ele para o app, informações da compra e da assinatura (produto, datas, estado), o idioma e a moeda da loja, e dados técnicos próprios de qualquer conexão com a internet, como o endereço IP. <strong>Nenhum</strong> hábito, texto de diário, lembrete, foto, vídeo ou retrospectiva é enviado a eles. Nós vemos, no painel do RevenueCat, o histórico de compras ligado a esse identificador anônimo, e não à sua identidade. Não usamos esses dados para publicidade nem para rastreamento.</p>
+    <p>O Rastro funciona no plano grátis sem nenhuma dessas conexões além da consulta da loja.</p>
 
-    <h2>9. Como apagar seus dados</h2>
+    <h2>9. Terceiros</h2>
+    <p>O Rastro não inclui SDKs de análise, publicidade ou rastreamento. O único serviço de terceiros incluído no app é o RevenueCat, para a assinatura (seção 8). Os serviços do sistema que ele usa (iCloud, notificações, calendário, câmera e fotos, reconhecimento de fala, a janela de avaliação do app e a loja de aplicativos) têm as próprias políticas, da Apple e do Google. As fontes do app são empacotadas nele; o app não as baixa da internet.</p>
+
+    <h2>10. Como apagar seus dados</h2>
     <ul>
-      <li><strong>No aparelho:</strong> desinstalar o app apaga o banco e a chave de criptografia.</li>
+      <li><strong>No aparelho:</strong> desinstalar o app apaga o banco, as fotos e os vídeos e a chave de criptografia. Você também pode apagar cada hábito, página, foto ou vídeo dentro do app.</li>
       <li><strong>No iCloud:</strong> Ajustes › seu nome › iCloud › Gerenciar armazenamento › Rastro › Apagar dados. Isso remove os dados do iCloud, e o app desliga a sincronização.</li>
       <li><strong>Eventos de calendário:</strong> apagar o hábito ou desligar &ldquo;Adicionar ao calendário&rdquo; remove o evento criado pelo app.</li>
+      <li><strong>Assinatura:</strong> cancele nos ajustes da loja (a seção 7 dos <a href="termos.html">Termos de Uso</a> explica como). Os registros de compra ficam com a Apple ou o Google e, de forma anônima, com o RevenueCat. Para pedir a exclusão do registro no RevenueCat, escreva para o contato abaixo.</li>
     </ul>
-    <p>Como não guardamos seus dados, não há nada a apagar do nosso lado.</p>
+    <p>Como não guardamos o conteúdo do app, não há nada a apagar do nosso lado.</p>
 
-    <h2>10. Seus direitos (LGPD)</h2>
-    <p>A LGPD garante, entre outros, acesso, correção, exclusão e portabilidade. Como os dados estão com você, é no próprio app e no seu aparelho que você exerce esses direitos: tudo o que o Rastro guarda você vê, edita e apaga ali. Para qualquer dúvida ou pedido, escreva para o contato abaixo.</p>
+    <h2>11. Seus direitos (LGPD)</h2>
+    <p>A LGPD garante, entre outros, acesso, correção, exclusão e portabilidade. Como os dados estão com você, é no próprio app e no seu aparelho que você exerce esses direitos: tudo o que o Rastro guarda você vê, edita e apaga ali. Sobre os dados de compra (seção 8), e para qualquer dúvida ou pedido, escreva para o contato abaixo.</p>
 
-    <h2>11. Crianças e adolescentes</h2>
-    <p>O Rastro não coleta dados de ninguém, inclusive de crianças e adolescentes: não há conta, cadastro, anúncios nem compartilhamento de informações. Quem for menor de idade deve usar o app com o conhecimento de um responsável, principalmente se ligar a sincronização com o iCloud ou o acesso ao calendário.</p>
+    <h2>12. Crianças e adolescentes</h2>
+    <p>O Rastro não coleta o conteúdo de ninguém, inclusive de crianças e adolescentes: não há conta, cadastro, anúncios nem compartilhamento de informações. Quem for menor de idade deve usar o app com o conhecimento de um responsável, principalmente se ligar a sincronização com o iCloud, o acesso ao calendário ou uma assinatura.</p>
 
-    <h2>12. Este site e contato</h2>
+    <h2>13. Este site e contato</h2>
     <p>Este site é hospedado no GitHub Pages. Não usamos cookies nem ferramentas de análise nele, mas o GitHub pode registrar acessos (como o endereço IP) conforme a política dele. Para dúvidas, pedidos ou qualquer direito acima: <a href="mailto:guilhermejenner@clotheapp.com">guilhermejenner@clotheapp.com</a></p>
 
-    <h2>13. Mudanças nesta política</h2>
+    <h2>14. Mudanças nesta política</h2>
     <p>Se a política mudar, publicaremos a nova versão nesta página, com a data de atualização.</p>
 
     <p class="apoio">Este texto descreve como o app funciona hoje e ainda não passou por revisão jurídica.</p>
